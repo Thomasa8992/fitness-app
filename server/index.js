@@ -20,12 +20,12 @@ app.route('/api/coach/:id')
             if (err) {
                 res.statusStatus(500);
             } else {
-                var chirps = JSON.parse(fileContents);
+                var chunks = JSON.parse(fileContents);
                 var id = req.params.id;
                 var response;
-                chirps.forEach(function(chirp) {
-                    if (chirp.id === id) {
-                        response = chirp;
+                chunks.forEach(function(chunk) {
+                    if (chunk.id === id) {
+                        response = chunk;
                     }
                 });
                 if (response) {
