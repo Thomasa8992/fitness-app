@@ -1,18 +1,41 @@
-<!doctype html>
-<html ng-app="fitnessApp">
-  <head>
-    <link rel="stylesheet" href="app/styles.css" type="text/css">
+<!DOCTYPE html>
+<html lang="en" ng-app="Fitness">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-resource.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
-  </head>
-  <body>
-    
-    <div ng-view>
-    </div>
-      
-	  <script src="app/app.js"></script>
-  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                                           
+            </button>
+                <a class="navbar-brand" href="#/home"><img class="header" src="" alt="COVALENCE"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a class="navbuttons" href="#/StrengthTraining"> Strength Training</a></li>
+                    <li><a class="navbuttons" href="#/DefenseTraining"> Defense Training</a></li>
+                    <li><a class="navbuttons" href="#/WeightLoss"> Weight-Loss </a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="navbuttons1" onclick="openNav(); getTotal()"> Cart <div class="circle">{{theCart.length}}</div></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div ng-view></div>
+</body>
 </html>
