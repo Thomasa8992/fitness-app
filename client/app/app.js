@@ -23,4 +23,6 @@ var Fitness = angular.module("Fitness", ['ngRoute'])
                 templateUrl: ""
             });
     })
+
+    
     
