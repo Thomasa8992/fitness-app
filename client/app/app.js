@@ -1,4 +1,4 @@
-var Fitness = angular.module("Fitness" ['ngRoute'])
+var Fitness = angular.module("fitness", ["ngRoute"]);
 
 Fitness.config(function ($routeProvider) {
     $routeProvider
@@ -34,7 +34,7 @@ Fitness.controller('listCtrl', function ($http, $scope, $routeParams, $location)
     }
 });
 
-Fitness.controller('singleCtrl', function($http, $scope, $location){
+Fitness.controller('singleCtrl', function($http, $scope,$routeParams, $location){
     var id = $routeParams.id
     http.get('http://localhost:3000/api/coach'+id,{
     })
