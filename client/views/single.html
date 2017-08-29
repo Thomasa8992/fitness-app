@@ -1,6 +1,6 @@
 <div class="Single" ng-controller="singleCtrl">
     <div class="col-4-lg">
-        <img class="MainImage" src="" alt="">
+        <img class="MainImage" ng-src="coach.image" alt="coach Image">
         <!--modal trigger. experiment -->
         <button type="button" class="btn btn-info btn-lg">View Promo Video</button>
         <!--modal trigger. experiment -->
@@ -13,13 +13,13 @@
     </div> 
     <div class="col-8-lg">
         <ul>
-            <li><h3 class="info">Name:</h3><h4>{{name}}</h4></li>
-            <li><h3 class="info">Expertise:</h3> <h4>{{type}}</h4></li>
+            <li><h3 class="info">Name:</h3><h4>{{coach.name}}</h4></li>
+            <li><h3 class="info">Expertise:</h3> <h4>{{coach.type}}</h4></li>
             <li><h3 class="info">Rating: </h3></li>
-            <li><h3 class="info">Price: </h3> <h4>{{price}}</h4></li>
-            <li><h3 class="info">Phone:</h3> <h4>{{phone}}</h4></li>
-            <li><h3 class="info">Email:</h3> <h4>{{email}}</h4></li>
-            <li><h3 class="info">Bio:</h3><h4>{{bio}}</h4></li>
+            <li><h3 class="info">Price: </h3> <h4>{{coach.price}}</h4></li>
+            <li><h3 class="info">Phone:</h3> <h4>{{coach.phone}}</h4></li>
+            <li><h3 class="info">Email:</h3> <h4>{{coach.email}}</h4></li>
+            <li><h3 class="info">Bio:</h3><h4>{{coach.bio}}</h4></li>
         </ul>
     </div>
     <div id="CoachModal" class="modal fade">
@@ -29,7 +29,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <iframe ng-src="{{coach.video}}" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
