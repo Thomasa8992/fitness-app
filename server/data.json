@@ -9,7 +9,7 @@
     "email": "mikerashid@gmail.com",
     "address": "12115 Burke St Suite #9. Santa Fe Springs, CA 90670",
     "bio": "Power bodybuilder and YouTube fitness guru who uses his self-titled channel to teach the strength of mind, body and spirit via hard work and discipline. He is the CEO and founder and of IMSOALPHA iX3, Alpha Academy Apparel and the co-owner of Metroflex, LBC and Original Addicts Gym.",
-    "video": "<iframe width="560" height="315" src="https://www.youtube.com/embed/LAhNyvTF5Uw" frameborder="0" allowfullscreen></iframe>"
+    "video": "https://www.youtube.com/embed/LAhNyvTF5Uw"
 },
 {   
     "id": "2",    
@@ -22,7 +22,7 @@
     "email": "gregjackson@gmail.com",
     "address": "301 Dr Martin Luther King Jr Ave NE, Albuquerque, NM 87102",
     "bio": "Greg Jackson is an American mixed martial arts trainer who co-owns Jackson Wink MMA Academy in Albuquerque, New Mexico, widely considered one of the top MMA training centers in the world.",
-    "video": "<iframe width="560" height="315" src="https://www.youtube.com/embed/av0RLjV9ThM" frameborder="0" allowfullscreen></iframe>"
+    "video": "https://www.youtube.com/embed/av0RLjV9ThM"
 },
 {
     "id": "3",    
@@ -35,6 +35,6 @@
     "email": "harleypasternak@gmail.com",
     "address": "Los Angeles, California",
     "bio": "Harley Samuel Pasternak is a Canadian-American personal trainer, motivational speaker, author and television host.",
-    "video": "<iframe width="560" height="315" src="https://www.youtube.com/embed/DXYEHZGKfoM" frameborder="0" allowfullscreen></iframe>"
+    "video": "https://www.youtube.com/embed/DXYEHZGKfoM"
 
 }]
