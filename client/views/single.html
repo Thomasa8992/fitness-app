@@ -1,4 +1,5 @@
 <div class="Single" ng-controller="singleCtrl">
+    <span><h2 class="info">Name:</h2><h3>{{coach.name}}</h3></span>
     <div class="col-4-lg">
         <img class="MainImage" ng-src="coach.image" alt="coach Image">
         <!--modal trigger. experiment -->
@@ -13,7 +14,6 @@
     </div> 
     <div class="col-8-lg">
         <ul>
-            <li><h3 class="info">Name:</h3><h4>{{coach.name}}</h4></li>
             <li><h3 class="info">Expertise:</h3> <h4>{{coach.type}}</h4></li>
             <li><h3 class="info">Rating: </h3></li>
             <li><h3 class="info">Price: </h3> <h4>{{coach.price}}</h4></li>

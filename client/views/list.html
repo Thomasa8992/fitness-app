@@ -1,11 +1,11 @@
 <div class="List" ng-controller="listCtrl">
-    <div class="col-12-lg" ng-repeat="coach in data">
+    <div class="col-3-lg coachitem" ng-repeat="coach in data">
         <img ng-src="{{coach.image}}" alt="couch image">
         <h4 class="info">Name: {{coach.name}}</h4>
         <h4 class="info">Expertise: {{coach.type}}</h4>
         <h4 class="info">Rating: {{coach.rating}}</h4>
         <h4 class="info">Price: {{coach.price}}</h4>
-        
+
         <button class="button2" ng-click="getId(coach.id)" value="submit">View Info</button>
     </div>
 </div>
