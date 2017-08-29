@@ -34,7 +34,7 @@ Fitness.controller('listCtrl', function ($http, $scope, $routeParams, $location)
 
 Fitness.controller('singleCtrl', function($http, $scope,$routeParams, $location){
     var id = $routeParams.id
-    http.get('http://localhost:3000/api/coach/'+id)
+    $http.get('http://localhost:3000/api/coach/'+id)
         .then(function(success) {
             $scope.data=success.data
             console.log(success.data)
