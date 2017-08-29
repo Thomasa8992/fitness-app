@@ -1,20 +1,20 @@
 <div class="Single" ng-controller="singleCtrl">
-    <span><h2 class="info">Name:</h2><h3>{{coach.name}}</h3></span>
     <div class="col-4-lg">
-        <img class="MainImage" ng-src="coach.image" alt="coach Image">
+        <span><h2 class="info">{{coach.name}}</h2></span>
+        <img class="MainImage" src="{{coach.image}}" alt="coach Image">
         <!--modal trigger. experiment -->
         <button type="button" class="btn btn-info btn-lg">View Promo Video</button>
         <!--modal trigger. experiment -->
         <div class="btn-group">
             <button type="button" class="btn btn-primary button1">Rate</button>
-            <button type="button" class="btn btn-primary button1">Home</button>
+            <a href="#/home"><button type="button" class="btn btn-primary button1">Home</button></a>
             <button type="button" class="btn btn-primary button1">Back</button>
         </div>
         <h3>Schedule:</h3><h4>{{}}</h4>
     </div> 
     <div class="col-8-lg">
         <ul>
-            <li><h3 class="info">Expertise:</h3> <h4>{{coach.type}}</h4></li>
+            <li><h3 class="info">Expertise:</h3> <h4>{{coach.expertise}}</h4></li>
             <li><h3 class="info">Rating: </h3></li>
             <li><h3 class="info">Price: </h3> <h4>{{coach.price}}</h4></li>
             <li><h3 class="info">Phone:</h3> <h4>{{coach.phone}}</h4></li>
@@ -29,7 +29,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <iframe ng-src="{{coach.video}}" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
+                    <iframe src="{{coach.video}}"></iframe>
                 </div>
             </div>
         </div>

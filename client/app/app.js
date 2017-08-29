@@ -14,7 +14,7 @@ Fitness.config(function ($routeProvider) {
         .when("/About", {
             templateUrl: "../views/about.html"
         })
-        .when("/one/:id", {
+        .when("/coach/:id", {
             templateUrl: "../views/single.html"
         })
 });
@@ -28,7 +28,7 @@ Fitness.controller('listCtrl', function ($http, $scope, $routeParams, $location)
             alert('something went wrong')
         })
     $scope.getId = function (id) {
-        $location.path('/one/' + id)
+        $location.path('/coach/' + id)
     }
 });
 
@@ -36,7 +36,7 @@ Fitness.controller('singleCtrl', function($http, $scope,$routeParams, $location)
     var id = $routeParams.id
     $http.get('http://localhost:3000/api/coach/'+id)
         .then(function(success) {
-            $scope.data=success.data
+            $scope.coach = success.data
             console.log(success.data)
         }, function (err){
             alert('something else went wrong')
