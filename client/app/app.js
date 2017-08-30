@@ -2,7 +2,7 @@ var Fitness = angular.module("fitness", ["ngRoute"]);
 
 Fitness.config(function ($routeProvider) {
     $routeProvider
-        .when("/home", {
+        .when("/", {
             templateUrl: "../views/home.html"
         })
         .when("/type/:type", {
@@ -63,6 +63,6 @@ Fitness.controller('typeCtrl', function ($http, $scope, $routeParams, $location)
             alert('something went wrong')
         })
     $scope.getId = function (id) {
-        $location.path('/type/' + id)
+        $location.path('/coach/' + id)
     }
 });

@@ -83,6 +83,19 @@ html {
 .underTxt {
   width: 25em;
 }
+.banner {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: solid #303030 9px;
+  border-top: none;
+  padding: 2em;
+  margin-top: 5em;
+}
+.title {
+  font-family: "Sonsie One";
+  color: coral;
+}
 .coachitem {
   padding: 0.5em;
   border: solid #303030 9px;

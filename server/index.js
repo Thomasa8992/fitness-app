@@ -14,6 +14,58 @@ app.route('/api/coach')
     .get(function(req, res) {
         res.sendFile(jsonPath);
     })
+app.route('/api/post')
+    .post(function(req, res) {
+        fs.readFile(jsonPath, 'utf-8', function(err, fileContents){
+            if (err) {
+                res.statusStatus(500);
+            } else { 
+            var parsed = JSON.parse(fileContents);
+            var parse = req.body
+            parsed.push(parse);
+
+            fs.writeFile(jsonPath, JSON.stringify(parsed), function(err) {
+                if (err) {
+                    res.send('Error writing to Json');
+                }
+              
+                res.send('Coach Created')
+            })
+        }
+    })
+})
+/*app.route('/api/delete')
+    .delete(function(req, res) {
+        fs.readFile(jsonPath, 'utf-8', function(err, fileContents) {
+            if (err) {
+                res.statusStatus(500);
+            } else {
+                var parsed = JSON.parse(fileContents)
+                var id = req.params.id
+                var deleted = false
+                var deleteIndex
+
+                parsed.forEach(function(coach, i) {
+                    if (coach.id === id) {
+                        deleted = true
+                        deleteIndex = i
+                    }
+                })
+            }
+        })
+        if (deleted){
+            parsed.splice(deleteIndex, 1);
+            fs.writeFile(jsonPath, JSON.stringify(parsed), function(err) {
+                if (err) {
+                    res.send('Error writing to Json');
+                } else {
+                    res.send('Deleted');
+                }
+            })
+        } else {
+            res.send('Not Found');
+        }
+    })*/
 app.route('/api/coach/:id')
     .get(function(req, res) {
         fs.readFile(jsonPath, 'utf-8', function(err, fileContents) {
