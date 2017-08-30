@@ -3,6 +3,7 @@ var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var firebase = require('firebase');
 var clientPath = path.join(__dirname, '..', 'client');
 var jsonPath = path.join(__dirname, 'data.json');
 app.use(express.static(clientPath));
@@ -11,9 +12,37 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.route('/api/coach')
-    .get(function(req, res) {
-        res.sendFile(jsonPath);
-    })
+//     .get(function(req, res) {
+//         res.sendFile(jsonPath);
+//     })
+
+.get(function(res, res, next) {
+    console.log('in fb route');
+
+    var config = {
+        apiKey: 'AIzaSyC0aUJENU5pDKGN1Sf9wIZeID2449QJS-c',
+        authDomain: 'innovate-fitness-app.firebaseapp.com',
+        databaseURL: 'https://innovate-fitness-app.firebaseio.com/',
+        storageBucket: 'gs://innovate-fitness-app.appspot.com'
+    };
+
+    if (!firebase.apps.length) {
+        firebase.initializeApp(config);
+    }
+    
+    firebase.database().ref('/fitness-app').once('value')
+    .then((success) => {
+        res.send(success.val());
+    });
+    // var getAll = firebase.database().ref('/fitness-app')
+    // getAll.on('value',function(getInfo){
+    //     res.send(getInfo.val());
+    // })
+    // .then((success) => {
+        
+    // });
+});
+
 app.route('/api/post')
     .post(function(req, res) {
         fs.readFile(jsonPath, 'utf-8', function(err, fileContents){

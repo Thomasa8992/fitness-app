@@ -28,7 +28,7 @@ Fitness.controller('listCtrl', function ($http, $scope, $routeParams, $location)
         .then(function (success) {
             $scope.data = success.data
         }, function (err) {
-            alert('something went wrong')
+            alert('api not showing up')
         })
     $scope.getId = function (id) {
         $location.path('/coach/' + id)
