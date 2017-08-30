@@ -96,7 +96,7 @@ html {
   align-items: center;
   justify-content: center;
   border: solid 9px;
-  border-color: #303030;
+  border-color: #222222;
   border-top: none;
   padding: 2em;
   background-size: cover;
@@ -113,7 +113,7 @@ html {
 }
 .coachitem {
   padding: 0.5em;
-  border: solid #303030 9px;
+  border: solid #222222 9px;
   margin: 2em;
   margin-top: 3em;
   display: inline-table;
@@ -132,23 +132,25 @@ html {
 .coachitem .button2 {
   border-radius: 10px;
   border: none;
-  background: #313131;
+  background: #222222;
   color: coral;
 }
 .coachitem .info {
-  color: #303030;
+  color: #222222;
 }
 .coachitem .info1 {
   color: coral;
   font-family: "Sonsie One";
 }
 .Single {
+  width: 95%;
   display: inline-flex;
-  border: solid 0.25em #303030;
+  border: solid 0.25em #222222;
   border-radius: 3em;
-  margin-left: 1.75em;
+  margin-left: 3em;
   margin-top: 5em;
-  margin-right: 1.75em;
+  margin-right: 3em;
+  margin-bottom: 5em;
   padding: 3em;
   background-image: url(../images/banner.png);
   background-size: cover;
@@ -170,7 +172,7 @@ html {
   color: white;
 }
 .Single .button1 {
-  background-color: #303030;
+  background-color: #222222;
   color: coral;
   width: 198px;
   border: none;
@@ -182,7 +184,7 @@ html {
 .Single .vidbutton {
   border: none;
   width: 400px;
-  background-color: #303030;
+  background-color: #222222;
   color: coral;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -194,7 +196,8 @@ html {
   text-shadow: 2px 2px 4px #000000;
 }
 .Single .coachinfo {
-  border: solid black 0.25em;
+  width: 100%;
+  border: solid #222222 0.25em;
   margin: 2em;
   border-radius: inherit;
   background-size: cover;
