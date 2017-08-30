@@ -17,6 +17,9 @@ Fitness.config(function ($routeProvider) {
         .when("/coach/:id", {
             templateUrl: "../views/single.html"
         })
+        .when("/category/:type", {
+            templateUrl: "../views/category.html"
+        })
 });
 
 Fitness.controller('listCtrl', function ($http, $scope, $routeParams, $location) {
@@ -52,7 +55,7 @@ Fitness.controller('singleCtrl', function($http, $scope,$routeParams, $location,
 
 Fitness.controller('typeCtrl', function ($http, $scope, $routeParams, $location) {
     var type = $routeParams.type
-    $http.get('http://localhost:3000/api/coach/' + type)
+    $http.get('http://localhost:3000/api/category/' + type)
         .then(function (success) {
             $scope.data = success.data
             console.log(success.data)
