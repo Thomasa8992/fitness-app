@@ -32,11 +32,18 @@ Fitness.controller('listCtrl', function ($http, $scope, $routeParams, $location)
     }
 });
 
-Fitness.controller('singleCtrl', function($http, $scope,$routeParams, $location){
+Fitness.controller('singleCtrl', function($http, $scope,$routeParams, $location, $sce){
     var id = $routeParams.id
     $http.get('http://localhost:3000/api/coach/'+id)
         .then(function(success) {
-            $scope.coach = success.data
+
+            let data = success.data;
+            
+            if (data.video) {
+                data.video = $sce.trustAsResourceUrl(data.video);
+            }
+
+            $scope.coach = data;
             console.log(success.data)
         }, function (err){
             alert('something else went wrong')

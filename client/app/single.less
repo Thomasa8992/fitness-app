@@ -1,0 +1,74 @@
+.Single {
+    display: inline-flex;
+    border: solid 0.25em @primary-color;
+    border-radius: 3em;
+    margin-left: 1.75em;
+    margin-top: 5em;
+    margin-right: 1.75em;
+    padding: 3em;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .MainImage{
+        border: @secondary-color 3px;
+        border-style: solid;
+        border-radius: 18em;
+        width: 100%;
+        height: 70%;
+    }
+
+    .button {
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1:hover {
+        background-color: rgb(99, 76, 115);
+        color:  white;
+    }
+
+    .button1 {
+        background-color: @primary-color;
+        color: @secondary-color; 
+        width: 198px;
+        border: none;
+    }
+    
+    .vidbutton:hover {
+        background-color: rgb(99, 76, 115);
+        color:  white;
+    }
+
+    .vidbutton {
+        border:none;
+        width: 400px;
+        background-color: @primary-color;
+        color: @secondary-color; 
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        display: block;
+    }
+
+    .info{
+        color: @secondary-color;
+        font-family: "Sonsie One";
+    }
+
+    .coachinfo{
+        margin-right: 10em;
+    }
+
+    ul {
+        list-style: none;
+      }
+
+    .modal-title {
+        color: @secondary-color;
+        font-family: "Sonsie One";
+    }
+    #infoname{
+        color: @secondary-color;
+        font-family: "Sonsie One";
+        text-align: center;
+    }
+}

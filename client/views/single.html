@@ -1,35 +1,35 @@
 <div class="Single" ng-controller="singleCtrl">
     <div class="col-4-lg">
-        <span><h2 class="info">{{coach.name}}</h2></span>
+        <span><h2 id="infoname" class="info">{{coach.name}}</h2></span>
         <img class="MainImage" src="{{coach.image}}" alt="coach Image">
         <!--modal trigger. experiment -->
-        <button type="button" class="btn btn-info btn-lg">View Promo Video</button>
+        <button type="button" class="btn btn-lg button vidbutton" data-toggle="modal" data-target="#CoachModal">View Promo Video</button>
         <!--modal trigger. experiment -->
         <div class="btn-group">
-            <button type="button" class="btn btn-primary button1">Rate</button>
-            <a href="#/home"><button type="button" class="btn btn-primary button1">Home</button></a>
-            <button type="button" class="btn btn-primary button1">Back</button>
+        <!--    <button type="button" class="btn btn-primary button1">Rate</button> -->
+            <a href="#/home"><button type="button" class="btn btn-primary button button1">Home</button></a>
+            <a href="#/coach"><button type="button" class="btn btn-primary button button1">Back</button></a>
         </div>
-        <h3>Schedule:</h3><h4>{{}}</h4>
     </div> 
-    <div class="col-8-lg">
+    <div class="col-8-lg coachinfo">
         <ul>
-            <li><h3 class="info">Expertise:</h3> <h4>{{coach.expertise}}</h4></li>
-            <li><h3 class="info">Rating: </h3></li>
-            <li><h3 class="info">Price: </h3> <h4>{{coach.price}}</h4></li>
-            <li><h3 class="info">Phone:</h3> <h4>{{coach.phone}}</h4></li>
-            <li><h3 class="info">Email:</h3> <h4>{{coach.email}}</h4></li>
-            <li><h3 class="info">Bio:</h3><h4>{{coach.bio}}</h4></li>
+            <li><h2 class="info">Expertise:</h2> <h4>{{coach.expertise}}</h4></li>
+            <li><h2 class="info">Schedule:</h2><h4>{{}}</h4>
+            <li><h2 class="info">Price: </h2> <h4>{{coach.price}}</h4></li>
+            <li><h2 class="info">Phone:</h2> <h4>{{coach.phone}}</h4></li>
+            <li><h2 class="info">Email:</h2> <h4>{{coach.email}}</h4></li>
+            <li><h2 class="info">Bio:</h2><h4>{{coach.bio}}</h4></li>
         </ul>
     </div>
-    <div id="CoachModal" class="modal fade">
+    <div id="CoachModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-conent">
                 <div class="model-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Promo Vid</h4>
                 </div>
                 <div class="modal-body">
-                    <iframe src="{{coach.video}}"></iframe>
+                    <iframe width="560px" height="315px" ng-src="{{coach.video}}" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
