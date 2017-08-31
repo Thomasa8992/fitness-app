@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node server/index.js"
+    "start": "lessc client/styles/main.less client/styles/styles.css && node server/index.js"
   },
   "repository": {
     "type": "git",
