@@ -5,9 +5,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var firebase = require('firebase');
 var clientPath = path.join(__dirname, '..', 'client');
-var jsonPath = path.join(__dirname, 'data.json');
 app.use(express.static(clientPath));
-// app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));

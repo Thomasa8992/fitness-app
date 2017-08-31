@@ -1,4 +1,4 @@
-angular.module("fitness", ["ngRoute", "controllers"])
+angular.module("fitness", ["ngRoute", "controllers", "factories"])
 .config(function ($routeProvider) {
     $routeProvider
         .when("/", {
@@ -26,3 +26,4 @@ angular.module("fitness", ["ngRoute", "controllers"])
 });
 
 angular.module('controllers', []);
+angular.module('factories', []);
