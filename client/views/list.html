@@ -4,10 +4,10 @@
     </div>
     <div class="col-3-lg coachitem" ng-repeat="coach in data">
         <img ng-src="{{coach.image}}" alt="couch image">
-        <h4 class="info1">{{coach.name}}</h4>
-        <h4 class="info">Expertise: {{coach.expertise}}</h4>
-        <h4 class="info">Rating: {{coach.rating}}</h4>
-        <h4 class="info">Price: {{coach.price}}</h4>
+        <h4 class="info">{{coach.name}}</h4>
+        <h4>Expertise: {{coach.expertise}}</h4>
+        <h4>Rating: {{coach.rating}}</h4>
+        <h4>Price: {{coach.price}}</h4>
 
         <button class="button2" ng-click="getId(coach.id)" value="submit">View Info</button>
     </div>
