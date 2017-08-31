@@ -1,0 +1,27 @@
+{
+  "name": "fitness-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "firebase": "^4.3.0",
+    "firebased": "^0.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thomasa8992/fitness-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thomasa8992/fitness-app/issues"
+  },
+  "homepage": "https://github.com/Thomasa8992/fitness-app#readme"
+}
