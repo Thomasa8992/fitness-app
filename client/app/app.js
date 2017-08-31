@@ -19,6 +19,10 @@ angular.module("fitness", ["ngRoute", "controllers"])
         .when("/category/:type", {
             templateUrl: "../views/category.html"
         })
+        .when("/calendar", {
+            templateUrl: "../views/calendar.html", 
+            controller: "calendarController"
+        })
 });
 
 angular.module('controllers', []);
