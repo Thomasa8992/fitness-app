@@ -5,9 +5,12 @@
   "main": "server/index.js",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "calender": "^1.0.3",
     "express": "^4.15.4",
     "firebase": "^4.3.0",
-    "firebased": "^0.0.6"
+    "firebased": "^0.0.6",
+    "full": "^1.0.1",
+    "fullcalendar": "^3.5.0"
   },
   "devDependencies": {},
   "scripts": {
