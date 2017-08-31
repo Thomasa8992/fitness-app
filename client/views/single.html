@@ -1,9 +1,9 @@
-<div class="List" ng-controller="singleCtrl">
+<div class="container-fluid List" ng-controller="singleCtrl">
     <div class="banner">
         <h1 class="title">{{coach.name}}</h1>
     </div>
     <div class="Single" >
-        <div class="col-4-lg col-12-md">
+        <div class="col-4-lg col-sm-6">
             <img class="MainImage" src="{{coach.image}}" alt="coach Image">
             <!--modal trigger. experiment -->
             <button type="button" class="btn btn-lg button vidbutton" data-toggle="modal" data-target="#CoachModal">View Promo Video</button>
@@ -14,7 +14,7 @@
                 <a href="#/coach"><button type="button" class="btn btn-primary button button1">Back</button></a>
             </div>
         </div> 
-        <div style="background-image:url({{coach.background}})" class="col-8-lg col-12-md coachinfo">
+        <div class="col-8-lg col-sm-6 coachinfo" style="background-image:url({{coach.background}})" >
             <ul>
                 <li><h2 class="info">Expertise:</h2> <h4>{{coach.expertise}}</h4></li>
                 <li><h2 class="info">Schedule:</h2><h4>{{}}</h4>

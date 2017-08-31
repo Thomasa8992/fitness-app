@@ -1,16 +1,103 @@
-.Single {
+
+@media screen and (min-width: 1060px) {
+    .Single {
+        width: 95%;
+        display: inline-flex;
+        border: solid 0.25em #222222;
+        border-radius: 3em;
+        margin-left: 3em;
+        margin-top: 5em;
+        margin-right: 3em;
+        margin-bottom: 5em;
+        padding: 3em;
+        background-image: url(../images/banner.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        .MainImage{
+            border: @secondary-color 3px;
+            border-style: solid;
+            border-radius: 18em;
+            width: 100%;
+            height: 70%;
+        }
+
+        .button {
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1:hover {
+            background-color: rgb(99, 76, 115);
+            color:  white;
+        }
+
+        .button1 {
+            background-color: @primary-color;
+            color: @secondary-color; 
+            width: 198px;
+            border: none;
+        }
+        
+        .vidbutton:hover {
+            background-color: rgb(99, 76, 115);
+            color:  white;
+        }
+
+        .vidbutton {
+            border:none;
+            width: 400px;
+            background-color: @primary-color;
+            color: @secondary-color; 
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            display: block;
+        }
+
+        .info{
+            color: @secondary-color;
+            font-family: "Kaushan Script";
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .coachinfo{
+            width: 100%;
+            border: solid @primary-color 0.25em;
+            margin: 2em;
+            border-radius: inherit;
+            background-size: cover;
+            color: coral;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .modal-title {
+            color: @secondary-color;
+            font-family: "Sonsie One";
+            text-shadow: 4px 4px 10px #000000;
+        }
+        #infoname{
+            color: @secondary-color;
+            font-family: "Sonsie One";
+            text-align: center;
+        }
+    }
+}
+
+.Single{
     width: 95%;
-    display: inline-flex;
     border: solid 0.25em #222222;
     border-radius: 3em;
-    margin-left: 3em;
-    margin-top: 5em;
-    margin-right: 3em;
-    margin-bottom: 5em;
-    padding: 3em;
+    margin-left: 1em;
+    margin-top: 2em;
+    padding: 1.5em;
     background-image: url(../images/banner.png);
     background-size: cover;
     background-repeat: no-repeat;
+    display: inline-block;
+
     .MainImage{
         border: @secondary-color 3px;
         border-style: solid;
@@ -19,66 +106,43 @@
         height: 70%;
     }
 
-    .button {
-        transition-duration: 0.4s;
-        cursor: pointer;
-    }
-
-    .button1:hover {
-        background-color: rgb(99, 76, 115);
-        color:  white;
-    }
-
-    .button1 {
-        background-color: @primary-color;
-        color: @secondary-color; 
-        width: 198px;
-        border: none;
-    }
-    
-    .vidbutton:hover {
-        background-color: rgb(99, 76, 115);
-        color:  white;
-    }
-
     .vidbutton {
-        border:none;
-        width: 400px;
+        border: none;
+        width: 100%;
         background-color: @primary-color;
-        color: @secondary-color; 
+        color: @secondary-color;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
         display: block;
     }
 
-    .info{
-        color: @secondary-color;
-        font-family: "Kaushan Script";
-        text-shadow: 2px 2px 4px #000000;
+    .vidbutton:hover {
+        background-color: rgb(99, 76, 115);
+        color:  white;
     }
-
-    .coachinfo{
-        width: 100%;
-        border: solid @primary-color 0.25em;
-        margin: 2em;
-        border-radius: inherit;
-        background-size: cover;
-        color: coral;
-        text-shadow: 2px 2px 4px #000000;
-    }
-
-    ul {
-        list-style: none;
-      }
 
     .modal-title {
         color: @secondary-color;
         font-family: "Sonsie One";
         text-shadow: 4px 4px 10px #000000;
     }
-    #infoname{
-        color: @secondary-color;
-        font-family: "Sonsie One";
-        text-align: center;
+
+    ul {
+        list-style: none;
     }
+
+    .coachinfo{
+        width: 100%;
+        border-radius: inherit;
+        background-size: cover;
+        color: coral;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+}
+
+.info{
+    color: @secondary-color;
+    font-family: "Kaushan Script";
+    text-shadow: 2px 2px 4px #000000;
 }
