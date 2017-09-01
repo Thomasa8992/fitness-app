@@ -4,6 +4,8 @@
     </div>
     <div class="Single">
         <div class="col-4-lg col-sm-6">
+    <div class="Single" >
+        <div class="col-4-lg">
             <img class="img-responsive img-circle MainImage" src="{{coach.image}}" alt="coach Image">
             <!--modal trigger. experiment -->
             <button type="button" class="btn btn-lg button vidbutton" data-toggle="modal" data-target="#CoachModal">View Promo Video</button>
@@ -13,7 +15,7 @@
             <a href="#/coach"><button type="button" class="btn btn-primary button button1">Back</button></a>
              <div id="map" ng-init="findLatLng(12, 13)"></div> 
         </div> 
-        <div class="col-8-lg col-sm-6 coachinfo" style="background-image:url({{coach.background}})" >
+        <div class="col-8-lg coachinfo" style="background-image:url({{coach.background}})" >
             <ul>
                 <li><h2 class="info">Expertise:</h2> <h4>{{coach.expertise}}</h4></li>
                 <li><h2 class="info">Schedule:</h2><h4>{{}}</h4>

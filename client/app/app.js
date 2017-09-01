@@ -29,6 +29,9 @@ angular.module("fitness", ["ngRoute", "controllers", "factories"])
         .when("/login", {
             templateUrl: "../views/login.html"
         })
+        .when("/user", {
+            templateUrl: "../views/user.html"
+        })
 });
 
 angular.module('controllers', []);
