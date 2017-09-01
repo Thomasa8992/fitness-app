@@ -14,19 +14,34 @@ angular.module('controllers')
 .controller('singleCtrl', function($http, $scope,$routeParams, $location, $sce){
     var id = $routeParams.id
     $http.get('http://localhost:3000/api/coach/'+id)
-        .then(function(success) {
+    .then(function(success) {
 
-            let data = success.data;
-            
-            if (data.video) {
-                data.video = $sce.trustAsResourceUrl(data.video);
-            }
+        let data = success.data;
+        $scope.coach = data;
 
-            $scope.coach = data;
-            console.log(success.data)
-        }, function (err){
-            alert('something else went wrong')
-        })
+        if (data.video) {
+            data.video = $sce.trustAsResourceUrl(data.video);
+        }
+
+        
+
+        console.log(success.data)
+    }, function (err){
+        alert('something else went wrong')
+    })  
+    $scope.findLatLng = function(lat,lng){
+            var uluru = {lat, lng};
+            console.log(uluru)
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    
 })
 .controller('typeCtrl', function ($http, $scope, $routeParams, $location) {
     var type = $routeParams.type
