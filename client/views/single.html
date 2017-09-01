@@ -2,7 +2,7 @@
     <div class="banner">
         <h1 class="title">{{coach.name}}</h1>
     </div>
-    <div class="Single" >
+    <div class="Single">
         <div class="col-4-lg col-sm-6">
             <img class="img-responsive img-circle MainImage" src="{{coach.image}}" alt="coach Image">
             <!--modal trigger. experiment -->
@@ -11,6 +11,7 @@
             <!--    <button type="button" class="btn btn-primary button1">Rate</button> -->
             <a href="#/"><button type="button" class="btn btn-primary button button1">Home</button></a>
             <a href="#/coach"><button type="button" class="btn btn-primary button button1">Back</button></a>
+             <div id="map" ng-init="findLatLng(12, 13)"></div> 
         </div> 
         <div class="col-8-lg col-sm-6 coachinfo" style="background-image:url({{coach.background}})" >
             <ul>
@@ -20,6 +21,7 @@
                 <li><h2 class="info">Phone:</h2> <h4>{{coach.phone}}</h4></li>
                 <li><h2 class="info">Email:</h2> <h4>{{coach.email}}</h4></li>
                 <li><h2 class="info">Bio:</h2><h4>{{coach.bio}}</h4></li>
+                     <p> </p> 
             </ul>
         </div>
         <div id="CoachModal" class="modal fade" role="dialog">
