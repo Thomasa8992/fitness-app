@@ -23,13 +23,13 @@ angular.module('controllers')
             data.video = $sce.trustAsResourceUrl(data.video);
         }
 
-        
-
-        console.log(success.data)
+        findLatLng(Number(data.lat), Number(data.long));
+        console.log(data)
     }, function (err){
         alert('something else went wrong')
     })  
-    $scope.findLatLng = function(lat,lng){
+    var findLatLng = function(lat,lng){
+        console.log(lat,lng);
             var uluru = {lat, lng};
             console.log(uluru)
             var map = new google.maps.Map(document.getElementById('map'), {
