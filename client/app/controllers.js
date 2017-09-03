@@ -23,7 +23,7 @@ angular.module('controllers')
             data.video = $sce.trustAsResourceUrl(data.video);
         }
 
-        findLatLng(Number(data.lat), Number(data.long));
+        findLatLng(Number(data.lat), Number(data.lng));
         console.log(data)
     }, function (err){
         alert('something else went wrong')
