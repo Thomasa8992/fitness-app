@@ -1,18 +1,20 @@
-<div class="container-fluid List">
-    <div class="banner">
-        <h1 class="title">Joe Blowe</h1>
-    </div>
-    <div class="Single" >
-        <div class="col-8-lg col-sm-6 coachinfo" style="background-image:url(../images/user.png)" >
-            <ul>
-                <li><h2 class="info">Schedule:</h2><h4>{{}}</h4>
-                <li><h2 class="info">Email:</h2> <h4>JBlowe@gmail.com</h4></li>
-            </ul>
+<div class="container-fluid List" ng-controller="listUserCtrl">
+    <div ng-repeat="user in data">
+        <div class="banner" >
+            <h1 class="title">{{user.username}}</h1>
         </div>
-        <div class="col-4-lg col-sm-6">
-            <img class="img-responsive img-circle MainImage" src="../images/add_user-512.png" alt="New user Image">
-            <a href="#/"><button type="button" class="btn btn-primary button button1">Home</button></a>
-            <a href="#/coach"><button type="button" class="btn btn-primary button button1">View Trainers</button></a>
+        <div class="Single" >
+            <div class="col-8-lg col-sm-6 coachinfo" style="background-image:url(../images/user.png)" >
+                <ul>
+                    <li><h2 class="info">Schedule:</h2><h4>{{}}</h4>
+                    <li><h2 class="info">Email:</h2> <h4>{{user.email}}</h4></li>
+                </ul>
+            </div>
+            <div class="col-4-lg col-sm-6">
+                <img class="img-responsive img-circle MainImage" src="../images/add_user-512.png" alt="New user Image">
+                <a href="#/"><button type="button" class="btn btn-primary button button1">Home</button></a>
+                <a href="#/coach"><button type="button" class="btn btn-primary button button1">View Trainers</button></a>
+            </div>
         </div>
     </div>
 </div>
