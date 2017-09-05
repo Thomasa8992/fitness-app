@@ -1,13 +1,15 @@
 <div class="container-fluid List" ng-controller="listUserCtrl">
     <div ng-repeat="user in data">
         <div class="banner" >
-            <h1 class="title">{{user.username}}</h1>
+            <h1 class="title">Profile</h1>
         </div>
         <div class="Single" >
             <div class="col-8-lg col-sm-6 coachinfo" style="background-image:url(../images/user.png)" >
                 <ul>
-                    <li><h2 class="info">Schedule:</h2><h4>{{}}</h4>
-                    <li><h2 class="info">Email:</h2> <h4>{{user.email}}</h4></li>
+                    <li><h2 class="info">Name: </h2><h3>{{user.username}}</h3>
+                    <li><h2 class="info">Email: </h2> <h3>{{user.email}}</h3></li>
+                    <li><h2 class="info">Coach Comments: </h2> <h3>{{user.comments}}</h3></li>
+                    <li><h2 class="info">Interests:</h2> <h3>{{user.interests}}</h3></li>
                 </ul>
             </div>
             <div class="col-4-lg col-sm-6">
