@@ -23,6 +23,15 @@ angular.module("fitness", ["ngRoute", "controllers", "factories"])
             templateUrl: "../views/calendar.html", 
             controller: "calendarController"
         })
+        .when("/newlogin", {
+            templateUrl: "../views/newlogin.html"
+        })
+        .when("/login", {
+            templateUrl: "../views/login.html"
+        })
+        .when("/user", {
+            templateUrl: "../views/user.html"
+        })
 });
 
 angular.module('controllers', []);

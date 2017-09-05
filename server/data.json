@@ -163,17 +163,17 @@
     },
       {
         "id": "12",
-        "name": "",
-        "image": "",
-        "type": "",
-        "expertise": "",
-        "price": "",
-        "background":"",
-        "phone": "",
-        "email": "",
-        "address": "",
-        "bio": "",
-        "video": ""
+        "name": "Jennifer Widerstrom",
+        "image": "https://i0.wp.com/www.girlzwiki.com/wp-content/uploads/2016/08/Jennifer-Widerstrom1-e1472079853187.jpg",
+        "type": "weight-loss",
+        "expertise": "aerobics",
+        "price": "$$$",
+        "background":"../images/weightloss.jpg",
+        "phone": "(818) 821-3148",
+        "email": "ryan@athletepromotions.com ",
+        "address": "11559 Ventura Boulevard Studio City, CA 91604",
+        "bio": "Biggest Loser Coach. Life coach. Fitness Expert. Philanthropist. American Gladiator. Solider of Love. NASM certified - Dynamax Master Trainer - CrossFit Level 1 certificate",
+        "video": "https://www.youtube.com/embed/j3NLR77-ktQ"
 
     },
       {
