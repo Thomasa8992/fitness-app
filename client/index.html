@@ -18,7 +18,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.0/fullcalendar.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.0/fullcalendar.print.css" rel="stylesheet">
 </head>
-<body>
+<body onload="loadUp()">
+    <script>
+        function loadUp() {
+        myVar = setTimeout(showPage, 3000);
+        }
+    </script>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
