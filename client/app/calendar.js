@@ -1,8 +1,16 @@
 angular.module('controllers')
-    .controller('calendarController', function (calendarService) {
+    .controller('calendarController', function (calendarService, $scope) {
         var cal = calendarService.initialize('#calendar');
 
-        cal([{title:'event1', start: '2017-09-11'}]);
+        var calendar = cal([{title:'event1', start: '2017-09-11'}]);
+
+        $scope.next = function() {
+            calendar.fullCalendar('next');
+        };
+
+        $scope.previous = function() {
+            calendar.fullCalendar('prev');
+        };
     });
 
 angular.module('factories')
@@ -13,9 +21,10 @@ angular.module('factories')
             return (events) => {
                 calendarObject = $(selector);
                 $(selector).fullCalendar({ events });
+                return $(selector);
             };
         };
-
+        
         this.addEvent = function(event) {
             var eventSource = [];
 
