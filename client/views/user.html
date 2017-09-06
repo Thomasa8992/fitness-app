@@ -3,17 +3,17 @@
         <div class="banner" >
             <h1 class="title">Profile</h1>
         </div>
-        <div class="Single" >
+        <div class="user" >
             <div class="col-8-lg col-sm-6 coachinfo" style="background-image:url(../images/user.png)" >
                 <ul>
                     <li><h2 class="info">Name: </h2><h3>{{user.username}}</h3>
                     <li><h2 class="info">Email: </h2> <h3>{{user.email}}</h3></li>
-                    <li><h2 class="info">Coach Comments: </h2> <h3>{{user.comments}}</h3></li>
                     <li><h2 class="info">Interests:</h2> <h3>{{user.interests}}</h3></li>
+                    <li><h2 class="info">Coach Comments: </h2> <h3>{{user.comments}}</h3></li>
                 </ul>
             </div>
             <div class="col-4-lg col-sm-6">
-                <img class="img-responsive img-circle MainImage" ng-src="{{user.image}}" alt="New user Image">
+                <img class="img-responsive user-image" ng-src="{{user.image}}" alt="New user Image">
                 <a href="#/"><button type="button" class="btn btn-primary button button1">Home</button></a>
                 <a href="#/coach"><button type="button" class="btn btn-primary button button1">View Trainers</button></a>
             </div>
