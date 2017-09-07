@@ -4,7 +4,7 @@
             <h1 class="title">Profile</h1>
         </div>
         <div class="user" >
-            <div class="col-8-lg col-sm-6 coachinfo" style="background-image:url(../images/user.png)" >
+            <div class="col-8-lg coachinfo" style="background-image:url(../images/user.png)" >
                 <ul>
                     <li><h2 class="info">Name: </h2><h3>{{user.username}}</h3>
                     <li><h2 class="info">Email: </h2> <h3>{{user.email}}</h3></li>
@@ -12,7 +12,7 @@
                     <li><h2 class="info">Coach Comments: </h2> <h3>{{user.comments}}</h3></li>
                 </ul>
             </div>
-            <div class="col-4-lg col-sm-6">
+            <div class="col-4-lg" style="margin-left: inherit;">
                 <img class="img-responsive user-image" ng-src="{{user.image}}" alt="New user Image">
                 <a href="#/"><button type="button" class="btn button button1">Home</button></a>
                 <a href="#/coach"><button type="button" class="btn button button1">View Trainers</button></a>
