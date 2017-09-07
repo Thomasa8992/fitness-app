@@ -65,7 +65,7 @@ app.route('/api/user')
                 deleteIndex;
             
             events.forEach(function(e, i) {
-                if (e.title == req.body.title) {
+                if (e.title == req.body.title && e.start == req.body.start) {
                     deleteIndex = i;
                 }
             });
