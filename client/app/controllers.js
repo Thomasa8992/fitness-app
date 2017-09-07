@@ -55,14 +55,11 @@ angular.module('controllers')
         }
 
         findLatLng(Number(data.lat), Number(data.lng));
-        console.log(data)
     }, function (err){
         alert('something else went wrong')
     })  
     var findLatLng = function(lat,lng){
-        console.log(lat,lng);
             var uluru = {lat, lng};
-            console.log(uluru)
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 7,
                 center: uluru
@@ -79,7 +76,6 @@ angular.module('controllers')
     $http.get('http://localhost:3000/api/category/' + type)
         .then(function (success) {
             $scope.data = success.data
-            console.log(success.data)
         }, function (err) {
             alert('something went wrong')
         })

@@ -30,7 +30,6 @@ angular.module('controllers')
                 }
             }});
         }, function (err) {
-            console.log(err);
         });
 
         $scope.next = function() {
@@ -45,7 +44,6 @@ angular.module('controllers')
 
 angular.module('factories')
     .service('calendarService', function() {
-        console.log('inside calendar service');
         var calendarObject;
 
         this.initialize = function(selector) {
