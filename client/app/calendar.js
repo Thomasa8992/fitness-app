@@ -5,9 +5,6 @@ angular.module('controllers')
         $http.get('http://localhost:3000/api/user')
         .then(function (success) {
             console.log(success);
-            $('#calendar').fullCalendar({
-                height: 650
-            });
             var cal = calendarService.initialize('#calendar');
             var events = success.data['Joe Blowe'].events;            
             calendar = cal(events);
