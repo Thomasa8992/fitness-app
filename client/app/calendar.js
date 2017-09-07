@@ -1,8 +1,20 @@
 angular.module('controllers')
-    .controller('calendarController', function (calendarService, $scope) {
-        var cal = calendarService.initialize('#calendar');
-
-        var calendar = cal([{title:'event1', start: '2017-09-11'}]);
+    .controller('calendarController', function (calendarService, $scope, $http) {
+        var calendar;
+        
+        $http.get('http://localhost:3000/api/user')
+        .then(function (success) {
+            console.log(success);
+            $('#calendar').fullCalendar({
+                height: 650
+            });
+            var cal = calendarService.initialize('#calendar');
+            var events = success.data['Joe Blowe'].events;            
+            calendar = cal(events);
+        }, function (err) {
+            console.log(err);
+        })
+        
 
         $scope.next = function() {
             calendar.fullCalendar('next');
@@ -15,6 +27,7 @@ angular.module('controllers')
 
 angular.module('factories')
     .service('calendarService', function() {
+        console.log('inside calendar service');
         var calendarObject;
 
         this.initialize = function(selector) {
@@ -23,11 +36,12 @@ angular.module('factories')
                 $(selector).fullCalendar({ events });
                 return $(selector);
             };
+            
         };
         
         this.addEvent = function(event) {
             var eventSource = [];
-
+            
             if (typeof event === 'object') {
                 eventSource.push(event);
             }

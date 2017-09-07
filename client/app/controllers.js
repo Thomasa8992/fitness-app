@@ -12,19 +12,38 @@ angular.module('controllers')
     }
 })
 .controller('listUserCtrl', function ($http, $scope) {
-    // var id = $routeParams.id
     $http.get('http://localhost:3000/api/user')
         .then(function (success) {
             $scope.data = success.data
         }, function (err) {
             alert('api not showing up')
         })
-    // $scope.getId = function (id) {
-    //     $location.path('/coach/' + id)
-    // }
 })
 .controller('singleCtrl', function($http, $scope,$routeParams, $location, $sce){
-    var id = $routeParams.id
+    var id = $routeParams.id;
+
+    $("#datepicker").datepicker({dateFormat: "yy-mm-dd"});
+
+    $scope.book = function() {
+        var date = $("#datepicker").val();
+
+        if (date === '') {
+            return;
+        }
+
+        $http({
+            method: 'POST',
+            url: '/api/user',
+            data: {
+                title: `Workout with ${$scope.coach.name}`,
+                start: date
+            }
+        })
+        .then(function() {
+            $location.path('/calendar');
+        });
+    }
+
     $http.get('http://localhost:3000/api/coach/'+id)
     .then(function(success) {
 

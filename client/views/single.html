@@ -11,6 +11,8 @@
            <!--    <button type="button" class="btn btn-primary button1">Rate</button> -->
            <a href="#/"><button type="button" class="btn btn-primary button button1">Home</button></a>
            <a href="#/coach"><button type="button" class="btn btn-primary button button1">Back</button></a>
+           <p>Date: <input type="text" id="datepicker"></p>
+           <button ng-click="book()">BOOK SESSION WITH ME</button>
            <div id="map" class="col-12-lg" ></div>
        </div>
        <div class="col-8-lg coachinfo" style="background-image:url({{coach.background}})" >
@@ -34,7 +36,7 @@
                    </div>
                    <div class="modal-body">
                        <iframe width="100%" height="600px" ng-src="{{coach.video}}" allowfullscreen></iframe>
-                   </div>
+                   </div>                 
                </div>
            </div>
        </div>

@@ -6,13 +6,12 @@ var app = express();
 var firebase = require('firebase');
 var clientPath = path.join(__dirname, '..', 'client');
 app.use(express.static(clientPath));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.route('/api/coach')
-.get(function(res, res, next) {
-    console.log('in fb route');
 
+app.use(function(req, res, next) {
     var config = {
         apiKey: 'AIzaSyC0aUJENU5pDKGN1Sf9wIZeID2449QJS-c',
         authDomain: 'innovate-fitness-app.firebaseapp.com',
@@ -22,49 +21,68 @@ app.route('/api/coach')
 
     if (!firebase.apps.length) {
         firebase.initializeApp(config);
+        next();
+    } else {
+        next();
     }
-    
-    firebase.database().ref('/fitness-app').once('value')
-    .then((success) => {
-        res.send(success.val());
-    });
 });
+
+app.route('/api/coach')
+    .get(function(req, res, next) {
+        firebase.database().ref('/fitness-app').once('value')
+        .then((success) => {
+            res.send(success.val());
+        });
+    });
 
 app.route('/api/user')
-.get(function(res, res, next) {
-    console.log('in fb route');
+    .get(function(req, res, next) {
+        firebase.database().ref('/fitness-user').once('value')
+        .then((success) => {
+            res.send(success.val());
+        });
+    })
+    .post(function(req, res, next) {
+        console.log('inside post route');
+        firebase.database().ref('/fitness-user/Joe Blowe/events').once('value')
+            .then((function(success) {
+                var events = success.val();
+                var newEvent = req.body;
 
-    var config = {
-        apiKey: 'AIzaSyC0aUJENU5pDKGN1Sf9wIZeID2449QJS-c',
-        authDomain: 'innovate-fitness-app.firebaseapp.com',
-        databaseURL: 'https://innovate-fitness-app.firebaseio.com/',
-        storageBucket: 'gs://innovate-fitness-app.appspot.com'
-    };
+                events.push(newEvent);
 
-    if (!firebase.apps.length) {
-        firebase.initializeApp(config);
-    }
-    
-    firebase.database().ref('/fitness-user').once('value')
-    .then((success) => {
-        res.send(success.val());
-    });
-});
+                firebase.database().ref('/fitness-user/Joe Blowe').update({
+                    events
+                }, function() {
+                    res.sendStatus(201);
+                });
+            }));
+    })
+    .delete(function(req, res, next) {
+        firebase.database().ref('/fitness-user/Joe Blowe/events').once('value')
+        .then((function(success) {
+            var events = success.val(),
+                deleteIndex;
+            
+            events.forEach(function(e, i) {
+                if (e.title == req.body.title) {
+                    deleteIndex = i;
+                }
+            });
+        
+            events.splice(deleteIndex,1);
+
+            firebase.database().ref('/fitness-user/Joe Blowe').update({
+                events
+            }, function() {
+                res.sendStatus(204);
+            });
+        }));
+    })
 
 app.route('/api/coach/:id')
     .get(function(req, res, next) {
-    console.log('in fb route');
 
-    var config = {
-        apiKey: 'AIzaSyC0aUJENU5pDKGN1Sf9wIZeID2449QJS-c',
-        authDomain: 'innovate-fitness-app.firebaseapp.com',
-        databaseURL: 'https://innovate-fitness-app.firebaseio.com/',
-        storageBucket: 'gs://innovate-fitness-app.appspot.com'
-    };
-
-    if (!firebase.apps.length) {
-        firebase.initializeApp(config);
-    }
     // var id = req.params.id
     firebase.database().ref('/fitness-app').once('value')
     .then((success) => {
@@ -109,16 +127,6 @@ app.route("/api/category/:type")
     .get(function(req, res, next) {
     console.log('in fb route');
 
-    var config = {
-        apiKey: 'AIzaSyC0aUJENU5pDKGN1Sf9wIZeID2449QJS-c',
-        authDomain: 'innovate-fitness-app.firebaseapp.com',
-        databaseURL: 'https://innovate-fitness-app.firebaseio.com/',
-        storageBucket: 'gs://innovate-fitness-app.appspot.com'
-    };
-
-    if (!firebase.apps.length) {
-        firebase.initializeApp(config);
-    }
     // var id = req.params.id
     firebase.database().ref('/fitness-app').once('value')
     .then((success) => {
